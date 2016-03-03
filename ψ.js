@@ -17,11 +17,11 @@ v = require('validator');
 
 ψ.isiso8601 = v.isISO8601;
 
-ψ.isalpha = ƒ.curry(function(locale, str) {
+ψ.isalpha = ƒ(function(locale, str) {
   return v.isAlpha(str, locale);
 });
 
-ψ.isalphanumeric = ƒ.curry(function(locale, str) {
+ψ.isalphanumeric = ƒ(function(locale, str) {
   return v.isAlphanumeric(str, locale);
 });
 
@@ -45,7 +45,7 @@ v = require('validator');
 
 ψ.containsvariablewidth = v.isVariableWidth;
 
-ψ.isbytelength = ƒ.curry(function(min, max, str) {
+ψ.isbytelength = ƒ(function(min, max, str) {
   return v.isByteLength(str, {
     min: min,
     max: max
@@ -68,7 +68,7 @@ v = require('validator');
 
 ψ.isisin = v.isISIN;
 
-ψ.ismobilephone = ƒ.curry(function(locale, str) {
+ψ.ismobilephone = ƒ(function(locale, str) {
   return v.isMobilePhone(str, locale);
 });
 
@@ -82,28 +82,28 @@ v = require('validator');
   return !v.isNull(str);
 };
 
-ψ.haslength = ƒ.curry(function(min, max, str) {
+ψ.haslength = ƒ(function(min, max, str) {
   return v.isLength(str, {
     min: min,
     max: max
   });
 });
 
-ψ.isdivisibleby = ƒ.curry(function(number, str) {
+ψ.isdivisibleby = ƒ(function(number, str) {
   return v.isDivisibleBy(str, number);
 });
 
-ψ.contains = ƒ.curry(function(seed, str) {
+ψ.contains = ƒ(function(seed, str) {
   return v.contains(str, seed);
 });
 
-ψ.equals = ƒ.curry(v.equals);
+ψ.equals = ƒ(v.equals);
 
-ψ["in"] = ƒ.curry(function(values, str) {
+ψ["in"] = ƒ(function(values, str) {
   return v.isIn(str, values);
 });
 
-ψ.onlychars = ƒ.curry(function(chars, str) {
+ψ.onlychars = ƒ(function(chars, str) {
   return v.isWhitelisted(str, chars);
 });
 
