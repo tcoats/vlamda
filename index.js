@@ -17,6 +17,8 @@ v = require('validator');
 
 ψ.isiso8601 = v.isISO8601;
 
+ψ.isjson = v.isJSON;
+
 ψ.isalpha = ƒ(function(locale, str) {
   return v.isAlpha(str, locale);
 });
@@ -30,8 +32,6 @@ v = require('validator');
 ψ.islowercase = v.isLowercase;
 
 ψ.isuppercase = v.isUppercase;
-
-ψ.isjson = v.isJSON;
 
 ψ.isascii = v.isAscii;
 
@@ -87,10 +87,6 @@ v = require('validator');
     min: min,
     max: max
   });
-});
-
-ψ.isdivisibleby = ƒ(function(number, str) {
-  return v.isDivisibleBy(str, number);
 });
 
 ψ.contains = ƒ(function(seed, str) {
